@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using XamarinGaphViewChartBinding.Services;
 
 namespace XamarinGaphViewChartBinding
 {
@@ -17,5 +18,14 @@ namespace XamarinGaphViewChartBinding
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                DependencyService.Get<ISuperToastsService>().ShowSuperToast();
+            }
+        }
+
     }
 }

@@ -1,10 +1,9 @@
 ﻿using System;
+
 namespace XamarinGaphViewChartBinding.Services
 {
-    public class ISuperToastsService
+    public interface ISuperToastsService
     {
-        public ISuperToastsService()
-        {
-        }
+        void ShowSuperToast();
     }
 }
